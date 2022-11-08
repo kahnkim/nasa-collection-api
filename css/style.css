@@ -1,21 +1,109 @@
-/******************************************
-/* CSS
-/*******************************************/
+/*==================== VARIABLES CSS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+  --body-color: #070707;
+  --text-color: #ced1d9;
+
+  --body-font: 'Poppins', sans-serif;
+
+  --h1-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+}
+
+/*==================== BASE ====================*/
 
 /* Box Model Hack */
 *{
   box-sizing: border-box;
 }
 
-/******************************************
-/* LAYOUT
-/*******************************************/
-img{
-  display: block;
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: var(--body-font);
+  font-size: var(--h1-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2{
+  font-weight: var(--font-semi-bold);
+}
+
+/*==================== LAYOUT ====================*/
+
+.nasa__container{
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-bottom: var(--mb-2);
 }
 
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+.nasa__title, .nasa__input, .nasa__button{
+  margin-bottom: var(--mb-1);
+}
+
+.nasa__results{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  align-items: center;
+}
+
+.nasa__img, .nasa__vid{
+  width: 60%;
+  border-radius: .5rem;
+}
+.nasa__img{
+  box-shadow: 0 0 25px var(--text-color);
+  
+}
+.nasa__vid{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+/* Make iframe embed video bigger (too small) by nesting in parent */
+.nasa__iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ .nasa__description{
+  width: 40%;
+  font-size: var(--h3-font-size);
+  padding-left: var(--mb-2);
+  padding-right: var(--mb-2);
+  line-height: var(--mb-3);
+ }
+
+
+
+
+

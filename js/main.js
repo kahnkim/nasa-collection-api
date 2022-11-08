@@ -10,18 +10,25 @@ const apod = {
         let getFetch = await fetch(url)
         let resultFetch = await getFetch.json()  
         if(resultFetch.media_type === 'video'){
+            // If the object returned has a media type of 'video' show iframe and hide img
+            document.querySelector('.nasa__vid').style.display = 'block'
             document.querySelector('img').style.display = 'none'
-            document.querySelector('iframe').style.display = 'block'
+
             document.querySelector('h1').innerHTML = resultFetch.title
             document.querySelector('iframe').src = resultFetch.url
-            document.querySelector('h3').innerHTML = resultFetch.explanation
+            document.querySelector('h2').innerHTML = resultFetch.explanation
         }else{
+            // Else show the img element and hide video
+            document.querySelector('img').style.display = 'block'
+            document.querySelector('.nasa__vid').style.display = 'none'
+
             document.querySelector('h1').innerHTML = resultFetch.title
             document.querySelector('img').src = resultFetch.hdurl
-            document.querySelector('h3').innerHTML = resultFetch.explanation
+            document.querySelector('h2').innerHTML = resultFetch.explanation
         }
         console.log(resultFetch);
     }
 }
-document.querySelector('iframe').style.display = 'none'
+document.querySelector('img').style.display = 'none'
+document.querySelector('.nasa__vid').style.display = 'none'
 document.querySelector('button').addEventListener('click', apod.nasaApi)

@@ -12,16 +12,20 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-
-		<h1>Nasa APOD</h1>
-		<label for="input-field">Date:</label>
-		<input type="text" name="input-field">
-		<button>Click Me</button>
-		<h2></h2>
-		<img src="" alt="">
-		<iframe src="" frameborder="0"></iframe>
-		<h3></h3>
-
+		<div class="nasa__container">
+			<h1 class="nasa__title">Nasa APOD</h1>
+			<label for="input-field">Select Date</label>
+			<input class="nasa__input" type="date" name="input-field">
+			<button class="nasa__button">Click For Pic</button>
+			<div class="nasa__results">
+				<img class="nasa__img" src="" alt="">
+				<div class="nasa__vid">
+					<iframe class="nasa__iframe" src="" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<h2 class="nasa__description"></h2>
+			</div>	
+		</div>
+		
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
