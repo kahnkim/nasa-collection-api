@@ -4,11 +4,12 @@
 :root{
   --body-color: #070707;
   --text-color: #ced1d9;
+  --button-color: #8d8470;
 
   --body-font: 'Poppins', sans-serif;
 
-  --h1-font-size: 1.5rem;
-  --h3-font-size: 1.25rem;
+  --h1-font-size: 1.25rem;
+  --h3-font-size: 1rem;
 
   --font-medium: 500;
   --font-semi-bold: 600;
@@ -53,7 +54,7 @@ h1, h2{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 70%;
   margin-bottom: var(--mb-2);
 }
 
@@ -64,7 +65,33 @@ h1, h2{
 .nasa__title, .nasa__input, .nasa__button{
   margin-bottom: var(--mb-1);
 }
-
+.nasa__input{
+  background: var(--text-color);
+  color: var(--body-color);
+  border: none;
+  border-radius: .5rem;
+  font-size: 1rem;
+  padding: .5rem;
+}
+.nasa__button{
+  background-color: var(--button-color);
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: .50rem;
+  border-radius: .5rem;
+}
+.nasa__button:hover{
+  background-color: #756d58;
+}
+.nasa__button:hover .nasa__button-icon{
+  transform: translateX(.25rem);
+}
+.nasa__button-icon{
+  margin-left: var(--mb-0-25);
+  transition: .3s;
+}
 .nasa__results{
   display: flex;
   flex-direction: row;
