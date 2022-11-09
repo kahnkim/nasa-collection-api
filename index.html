@@ -8,6 +8,9 @@
 		<title>Title in the tab</title>
 
 		<!-- external CSS link -->
+		<!--==================== UNICONS ====================-->
+		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -16,7 +19,10 @@
 			<h1 class="nasa__title">Nasa APOD</h1>
 			<label for="input-field">Select Date</label>
 			<input class="nasa__input" type="date" name="input-field">
-			<button class="nasa__button">Click For Pic</button>
+			<button class="nasa__button">
+				Get Pic
+				<i class="uil uil-arrow-right nasa__button-icon"></i>
+			</button>
 			<div class="nasa__results">
 				<img class="nasa__img" src="" alt="">
 				<div class="nasa__vid">
